@@ -8,5 +8,4 @@ modules = {'models': ['database.models']}
 async def load_database(*_, **__):
     await Tortoise.init(db_url=connection_string, modules=modules)
     await Tortoise.generate_schemas()
-    logger.info('Database loaded')
     

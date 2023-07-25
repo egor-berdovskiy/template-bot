@@ -14,7 +14,7 @@ class Telegram:
 class WebHooks:
     section = 'WebHooks'
     listen_address = parser.get(section, 'listen_address')
-    listen_port = parser.get(section, 'listen_port')
+    listen_port = parser.getint(section, 'listen_port')
     base_url = parser.get(section, 'base_url')
     bot_path = parser.get(section, 'bot_path')
 
@@ -22,7 +22,7 @@ class WebHooks:
 class DataBase:
     section = 'DataBase'
     host = parser.get(section, 'host')
-    port = parser.get(section, 'port')
+    port = parser.getint(section, 'port')
     user = parser.get(section, 'user')
     password = parser.get(section, 'password')
     database = parser.get(section, 'database')
@@ -32,4 +32,4 @@ class Settings:
     section = 'Settings'
     currency = parser.get(section, 'currency')
     currency_code = parser.get(section, 'currency_code')
-    referral_bonus = parser.get(section, 'referral_bonus')
+    referral_bonus = parser.getfloat(section, 'referral_bonus')

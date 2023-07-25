@@ -8,7 +8,7 @@ class User(Model):
     type = fields.CharField(max_length=32, default=UserType.user, validators=[UserType.validator])
 
     user_id = fields.BigIntField(unique=True)
-    fullname = fields.CharField(max_length=64)
+    full_name = fields.CharField(max_length=130)
     username = fields.CharField(max_length=32, null=True)
     language = fields.CharField(max_length=2, default='ru')
 
